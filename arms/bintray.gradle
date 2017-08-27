@@ -8,8 +8,8 @@ if (project.rootProject.findProject('local.properties') != null){
     properties.load(project.rootProject.file('local.properties').newDataInputStream())
 }
 
-def gitUrl = 'https://github.com/Superingxz/RxMVP.git'   // Git仓库的url
-def siteUrl = 'https://github.com/Superingxz/RxMVP'   // 项目的主页
+def gitUrl = 'https://github.com/Superingxz/MoligyMvpArms.git'   // Git仓库的url
+def siteUrl = 'https://github.com/Superingxz/MoligyMvpArms'   // 项目的主页
 
 version = rootProject.ext.android["versionName"]
 group = "me.moligy"
@@ -49,7 +49,7 @@ install {
             project {
                 packaging 'aar'
                 // Add your description here
-                name 'RxMVP'
+                name 'mvparms'
                 description 'A common Architecture for Android Applications developing based on MVP，integrates many Open Source Projects( like Dagger2,Rxjava,Retrofit... ),to make your developing quicker and easier.'
                 url siteUrl
                 // Set your license
