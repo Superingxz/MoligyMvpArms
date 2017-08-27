@@ -12,7 +12,7 @@ def gitUrl = 'https://github.com/Superingxz/MoligyMvpArms.git'   // Git仓库的
 def siteUrl = 'https://github.com/Superingxz/MoligyMvpArms'   // 项目的主页
 
 version = rootProject.ext.android["versionName"]
-group = "me.moligy"
+group = "com.moligy"
 
 
 bintray {
@@ -23,7 +23,7 @@ bintray {
         userOrg = "morlige" //这个是你创建时的organization,必须要有，不然没办法找到指定路径
 
         repo = "maven"
-        name = 'RxMVP'
+        name = 'mvparms'
         licenses = ["Apache-2.0"]
         websiteUrl = siteUrl
         vcsUrl = gitUrl
