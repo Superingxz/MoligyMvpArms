@@ -7,24 +7,38 @@ version = rootProject.ext.android["versionName"]
 group = "me.moligy.mvp"
 
 task sourcesJar(type: Jar) {
+
     from android.sourceSets.main.java.srcDirs
+
     classifier = 'sources'
+
 }
+
 task javadoc(type: Javadoc) {
-    failOnError false
+
     source = android.sourceSets.main.java.srcDirs
+
     classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
     destinationDir = file("../javadoc/")
     failOnError false
 }
+
 task javadocJar(type: Jar, dependsOn: javadoc) {
+
     classifier = 'javadoc'
+
     from javadoc.destinationDir
+
 }
+
 artifacts {
+
     archives javadocJar
+
     archives sourcesJar
+
 }
+
 javadoc {
     options{
         encoding "UTF-8"
@@ -36,67 +50,97 @@ javadoc {
 }
 
 install {
-    repositories.mavenInstaller {
-        // This generates POM.xml with proper parameters
-        pom {
-            project {
-                packaging 'aar'
-                // Add your description here
-                name 'arms'
-                description 'A common Architecture for Android Applications developing based on MVP，integrates many Open Source Projects( like Dagger2,Rxjava,Retrofit... ),to make your developing quicker and easier.'
-                url siteUrl
-                // Set your license
-                licenses {
-                    license {
-                        name 'The Apache Software License, Version 2.0'
-                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-                    }
-                }
-                developers {
-                    developer {
-                        id '"Superingxz'        //填写bintray或者github的用户名
-                        name 'myz'         //姓名，可以是中文
-                        email '1803117759@qq.com'
-                    }
-                }
-                scm {
-                    connection gitUrl
-                    developerConnection gitUrl
-                    url siteUrl
-                }
-            }
-        }
-    }
-}
 
-Properties properties = new Properties()
-boolean isHasFile = false
-if (project.rootProject.findProject('local.properties') != null){
-    isHasFile = true
-    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+    repositories.mavenInstaller {
+
+// This generates POM.xml with proper parameters
+
+        pom {
+
+            project {
+
+                packaging 'aar'
+
+// Add your description here
+
+                name 'Jcenter for Android.' //项目描述
+
+                url siteUrl
+
+// Set your license
+
+                licenses {
+
+                    license {
+
+                        name 'The Apache Software License, Version 2.0'
+
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+
+                    }
+
+                }
+
+                developers {
+
+                    developer {
+
+                        id 'Mo' //填写的一些基本信息
+
+                        name 'yaozhi'
+
+                        email '1803117759@qq.com'
+
+                    }
+
+                }
+
+                scm {
+
+                    connection gitUrl
+
+                    developerConnection gitUrl
+
+                    url siteUrl
+
+                }
+
+            }
+
+        }
+
+    }
+
 }
+Properties properties = new Properties()
+
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
 bintray {
-    user = isHasFile ? properties.getProperty("bintray.user") : System.getenv("bintray_user")
-    key = isHasFile ? properties.getProperty("bintray.apikey") : System.getenv("bintray_apikey")
+
+    user = properties.getProperty("bintray.user")
+
+    key = properties.getProperty("bintray.apikey")
+
+    configurations = ['archives']
 
     pkg {
         userOrg = "morlige" //这个是你创建时的organization,必须要有，不然没办法找到指定路径
 
         repo = "maven"
-        name = 'RxMvpArms'
-        licenses = ["Apache-2.0"]
-        websiteUrl = siteUrl
-        vcsUrl = gitUrl
-        publish = true // 是否是公开项目。
 
-        version {
-            name = rootProject.ext.android["versionName"]
-            desc = 'A common Architecture for Android Applications developing based on MVP，integrates many Open Source Projects( like Dagger2,Rxjava,Retrofit... ),to make your developing quicker and easier.'
-            released = new Date()
-            vcsTag = 'v' + rootProject.ext.android["versionName"]
-            attributes = ['gradle-plugin': 'com.use.less:com.use.less.gradle:gradle-useless-plugin']
-        }
+        name = "RxMvpArms" //发布到JCenter上的项目名字
+
+        websiteUrl = siteUrl
+
+        vcsUrl = gitUrl
+
+        licenses = ["Apache-2.0"]
+
+        publish = true
+
     }
-    configurations = ['archives']
+
 }
+
 
