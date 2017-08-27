@@ -83,7 +83,7 @@ bintray {
         userOrg = "morlige" //这个是你创建时的organization,必须要有，不然没办法找到指定路径
 
         repo = "maven"
-        name = 'arms'
+        name = 'RxMvp'
         licenses = ["Apache-2.0"]
         websiteUrl = siteUrl
         vcsUrl = gitUrl
