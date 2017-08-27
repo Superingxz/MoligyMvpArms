@@ -12,7 +12,7 @@ def gitUrl = 'https://github.com/Superingxz/MoligyMvpArms.git'   // Git仓库的
 def siteUrl = 'https://github.com/Superingxz/MoligyMvpArms'   // 项目的主页
 
 version = rootProject.ext.android["versionName"]
-group = "com.moligy"
+group = "me.moligy.mvp"
 
 
 bintray {
@@ -23,7 +23,7 @@ bintray {
         userOrg = "morlige" //这个是你创建时的organization,必须要有，不然没办法找到指定路径
 
         repo = "maven"
-        name = 'mvparms'
+        name = 'arms'
         licenses = ["Apache-2.0"]
         websiteUrl = siteUrl
         vcsUrl = gitUrl
@@ -49,7 +49,7 @@ install {
             project {
                 packaging 'aar'
                 // Add your description here
-                name 'mvparms'
+                name 'arms'
                 description 'A common Architecture for Android Applications developing based on MVP，integrates many Open Source Projects( like Dagger2,Rxjava,Retrofit... ),to make your developing quicker and easier.'
                 url siteUrl
                 // Set your license
