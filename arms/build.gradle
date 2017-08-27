@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'me.tatarka.retrolambda'
-
+apply plugin: 'com.novoda.bintray-release'
 android {
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
     buildToolsVersion rootProject.ext.android["buildToolsVersion"]
@@ -23,6 +23,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    lintOptions {
+        abortOnError false
+    }
 }
 
 
@@ -32,6 +35,15 @@ buildscript {
     }
 }
 
+
+publish {
+    userOrg = 'morligy'//bintray.com用户名
+    groupId = 'com.moligy.mvp'//jcenter上的路径
+    artifactId = 'MoligyMvpArms'//项目名称
+    publishVersion = '1.0.0'//版本号
+    desc = 'A common Architecture for Android Applications developing based on MVP，integrates many Open Source Projects( like Dagger2,Rxjava,Retrofit... ),to make your developing quicker and easier.'//描述，不重要
+    website = 'https://github.com/Superingxz/MoligyMvpArms'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
+}
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
@@ -132,4 +144,4 @@ dependencies {
 }
 
 
-apply from: 'bintray.gradle'
+//apply from: 'bintray.gradle'
