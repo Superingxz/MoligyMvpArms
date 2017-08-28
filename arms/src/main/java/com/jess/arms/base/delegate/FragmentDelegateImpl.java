@@ -21,13 +21,13 @@ import timber.log.Timber;
  */
 
 public class FragmentDelegateImpl implements FragmentDelegate {
-    private android.support.v4.app.FragmentManager mFragmentManager;
-    private android.support.v4.app.Fragment mFragment;
+    private FragmentManager mFragmentManager;
+    private Fragment mFragment;
     private IFragment iFragment;
     private Unbinder mUnbinder;
 
 
-    public FragmentDelegateImpl(android.support.v4.app.FragmentManager fragmentManager, android.support.v4.app.Fragment fragment) {
+    public FragmentDelegateImpl(FragmentManager fragmentManager, Fragment fragment) {
         this.mFragmentManager = fragmentManager;
         this.mFragment = fragment;
         this.iFragment = (IFragment) fragment;
