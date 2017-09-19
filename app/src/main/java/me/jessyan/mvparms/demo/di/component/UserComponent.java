@@ -1,4 +1,4 @@
-/*
+/**
   * Copyright 2017 JessYan
   *
   * Licensed under the Apache License, Version 2.0 (the "License");
@@ -23,8 +23,14 @@ import me.jessyan.mvparms.demo.di.module.UserModule;
 import me.jessyan.mvparms.demo.mvp.ui.activity.UserActivity;
 
 /**
- * Created by jess on 9/4/16 11:17
- * Contact with jess.yan.effort@gmail.com
+ * ================================================
+ * 展示 Component 的用法
+ *
+ * @see <a href="https://github.com/JessYanCoding/MVPArms/wiki#2.4.6">Component wiki 官方文档</a>
+ * Created by JessYan on 09/04/2016 11:17
+ * Contact with <mailto:jess.yan.effort@gmail.com>
+ * Follow me on <https://github.com/JessYanCoding>
+ * ================================================
  */
 @ActivityScope
 @Component(modules = UserModule.class,dependencies = AppComponent.class)

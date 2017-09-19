@@ -1,4 +1,4 @@
-/*
+/**
   * Copyright 2017 JessYan
   *
   * Licensed under the Apache License, Version 2.0 (the "License");
@@ -27,8 +27,13 @@ import me.jessyan.mvparms.demo.mvp.model.entity.User;
 import me.jessyan.mvparms.demo.mvp.ui.holder.UserItemHolder;
 
 /**
- * Created by jess on 9/4/16 12:57
- * Contact with jess.yan.effort@gmail.com
+ * ================================================
+ * 展示 {@link DefaultAdapter} 的用法
+ * <p>
+ * Created by JessYan on 09/04/2016 12:57
+ * Contact with <mailto:jess.yan.effort@gmail.com>
+ * Follow me on <https://github.com/JessYanCoding>
+ * ================================================
  */
 public class UserAdapter extends DefaultAdapter<User> {
     public UserAdapter(List<User> infos) {
