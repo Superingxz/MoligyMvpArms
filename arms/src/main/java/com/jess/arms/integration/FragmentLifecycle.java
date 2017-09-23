@@ -1,4 +1,4 @@
-/*
+/**
   * Copyright 2017 JessYan
   *
   * Licensed under the Apache License, Version 2.0 (the "License");
@@ -29,12 +29,14 @@ import timber.log.Timber;
 
 /**
  * ================================================
+ * {@link FragmentManager.FragmentLifecycleCallbacks} 默认实现类
+ * 通过 {@link FragmentDelegate} 管理 {@link Fragment}
+ * <p>
  * Created by JessYan on 04/09/2017 16:04
- * Contact with jess.yan.effort@gmail.com
- * Follow me on https://github.com/JessYanCoding
+ * Contact with <mailto:jess.yan.effort@gmail.com>
+ * Follow me on <https://github.com/JessYanCoding>
  * ================================================
  */
-
 public class FragmentLifecycle extends FragmentManager.FragmentLifecycleCallbacks {
 
     @Override

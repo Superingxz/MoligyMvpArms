@@ -1,4 +1,4 @@
-/*
+/**
   * Copyright 2017 JessYan
   *
   * Licensed under the Apache License, Version 2.0 (the "License");
@@ -30,9 +30,11 @@ import java.util.zip.Inflater;
 
 /**
  * ================================================
+ * 处理压缩和解压的工具类
+ * <p>
  * Created by JessYan on 10/05/2016
- * Contact with jess.yan.effort@gmail.com
- * Follow me on https://github.com/JessYanCoding
+ * Contact with <mailto:jess.yan.effort@gmail.com>
+ * Follow me on <https://github.com/JessYanCoding>
  * ================================================
  */
 public class ZipHelper {
@@ -49,7 +51,7 @@ public class ZipHelper {
      * @return
      */
     public static String decompressToStringForZlib(byte[] bytesToDecompress) {
-        return decompressToStringForZlib(bytesToDecompress,"UTF-8");
+        return decompressToStringForZlib(bytesToDecompress, "UTF-8");
     }
 
 

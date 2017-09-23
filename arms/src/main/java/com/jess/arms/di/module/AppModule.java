@@ -1,4 +1,4 @@
-/*
+/**
   * Copyright 2017 JessYan
   *
   * Licensed under the Apache License, Version 2.0 (the "License");
@@ -33,7 +33,13 @@ import dagger.Module;
 import dagger.Provides;
 
 /**
- * Created by jess on 8/4/16.
+ * ================================================
+ * 提供一些框架必须的实例的 {@link Module}
+ * <p>
+ * Created by JessYan on 8/4/2016.
+ * Contact with <mailto:jess.yan.effort@gmail.com>
+ * Follow me on <https://github.com/JessYanCoding>
+ * ================================================
  */
 @Module
 public class AppModule {
@@ -51,7 +57,7 @@ public class AppModule {
 
     @Singleton
     @Provides
-    public Gson provideGson(Application application, @Nullable GsonConfiguration configuration){
+    public Gson provideGson(Application application, @Nullable GsonConfiguration configuration) {
         GsonBuilder builder = new GsonBuilder();
         if (configuration != null)
             configuration.configGson(application, builder);
@@ -66,7 +72,7 @@ public class AppModule {
 
     @Singleton
     @Provides
-    public Map<String, Object> provideExtras(){
+    public Map<String, Object> provideExtras() {
         return new ArrayMap<>();
     }
 

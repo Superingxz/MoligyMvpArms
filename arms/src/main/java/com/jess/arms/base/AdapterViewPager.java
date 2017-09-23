@@ -1,4 +1,4 @@
-/*
+/**
   * Copyright 2017 JessYan
   *
   * Licensed under the Apache License, Version 2.0 (the "License");
@@ -24,6 +24,15 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
+/**
+ * ================================================
+ * 基类 {@link FragmentStatePagerAdapter}
+ * <p>
+ * Created by JessYan on 22/03/2016
+ * Contact with <mailto:jess.yan.effort@gmail.com>
+ * Follow me on <https://github.com/JessYanCoding>
+ * ================================================
+ */
 public class AdapterViewPager extends FragmentStatePagerAdapter {
     private List<Fragment> mList;
     private CharSequence[] mTitles;

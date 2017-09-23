@@ -1,4 +1,4 @@
-/*
+/**
   * Copyright 2017 JessYan
   *
   * Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,10 +19,15 @@ import android.app.Application;
 import android.content.Context;
 
 /**
- * Created by jess on 18/07/2017 17:43
- * Contact with jess.yan.effort@gmail.com
+ * ================================================
+ * 用于代理 {@link Application} 的生命周期
+ *
+ * @see AppDelegate
+ * Created by JessYan on 18/07/2017 17:43
+ * Contact with <mailto:jess.yan.effort@gmail.com>
+ * Follow me on <https://github.com/JessYanCoding>
+ * ================================================
  */
-
 public interface AppLifecycles {
     void attachBaseContext(Context base);
 

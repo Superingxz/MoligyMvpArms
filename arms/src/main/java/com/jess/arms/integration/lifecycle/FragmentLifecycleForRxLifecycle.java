@@ -1,4 +1,4 @@
-/*
+/**
   * Copyright 2017 JessYan
   *
   * Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,18 +21,20 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.view.View;
 
+import com.trello.rxlifecycle2.RxLifecycle;
 import com.trello.rxlifecycle2.android.FragmentEvent;
 
 import io.reactivex.subjects.Subject;
 
 /**
  * ================================================
+ * 配合 {@link FragmentLifecycleable} 使用,使 {@link Fragment} 具有 {@link RxLifecycle} 的特性
+ *
  * Created by JessYan on 26/08/2017 16:02
- * Contact with jess.yan.effort@gmail.com
- * Follow me on https://github.com/JessYanCoding
+ * Contact with <mailto:jess.yan.effort@gmail.com>
+ * Follow me on <https://github.com/JessYanCoding>
  * ================================================
  */
-
 public class FragmentLifecycleForRxLifecycle extends FragmentManager.FragmentLifecycleCallbacks {
 
     @Override

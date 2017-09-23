@@ -1,4 +1,4 @@
-/*
+/**
   * Copyright 2017 JessYan
   *
   * Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,15 +18,20 @@ package com.jess.arms.http.imageloader;
 import android.widget.ImageView;
 
 /**
- * Created by jess on 8/5/16 15:19
- * contact with jess.yan.effort@gmail.com
- * 这里是图片加载配置信息的基类,可以定义一些所有图片加载框架都可以用的通用参数
+ * ================================================
+ * 这里是图片加载配置信息的基类,定义一些所有图片加载框架都可以用的通用参数
+ * 每个 {@link BaseImageLoaderStrategy} 应该对应一个 {@link ImageConfig} 实现类
+ * <p>
+ * Created by JessYan on 8/5/16 15:19
+ * Contact with <mailto:jess.yan.effort@gmail.com>
+ * Follow me on <https://github.com/JessYanCoding>
+ * ================================================
  */
 public class ImageConfig {
     protected String url;
     protected ImageView imageView;
-    protected int placeholder;
-    protected int errorPic;
+    protected int placeholder;//占位符
+    protected int errorPic;//错误占位符
 
 
     public String getUrl() {

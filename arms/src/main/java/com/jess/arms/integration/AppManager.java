@@ -1,4 +1,4 @@
-/*
+/**
   * Copyright 2017 JessYan
   *
   * Licensed under the Apache License, Version 2.0 (the "License");
@@ -45,10 +45,11 @@ import timber.log.Timber;
  * 用于管理所有 activity,和在前台的 activity
  * 可以通过直接持有 AppManager 对象执行对应方法
  * 也可以通过 {@link #post(Message)} ,远程遥控执行对应方法,用法和 EventBus 类似
- * <p>
+ *
+ * @see <a href="https://github.com/JessYanCoding/MVPArms/wiki#3.11">AppManager wiki 官方文档</a>
  * Created by JessYan on 14/12/2016 13:50
- * Contact with jess.yan.effort@gmail.com
- * Follow me on https://github.com/JessYanCoding
+ * Contact with <mailto:jess.yan.effort@gmail.com>
+ * Follow me on <https://github.com/JessYanCoding>
  * ================================================
  */
 @Singleton

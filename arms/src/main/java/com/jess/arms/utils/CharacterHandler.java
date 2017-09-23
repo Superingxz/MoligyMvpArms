@@ -1,4 +1,4 @@
-/*
+/**
   * Copyright 2017 JessYan
   *
   * Licensed under the Apache License, Version 2.0 (the "License");
@@ -38,9 +38,11 @@ import javax.xml.transform.stream.StreamSource;
 
 /**
  * ================================================
+ * 处理字符串的工具类
+ * <p>
  * Created by JessYan on 2016/3/16
- * Contact with jess.yan.effort@gmail.com
- * Follow me on https://github.com/JessYanCoding
+ * Contact with <mailto:jess.yan.effort@gmail.com>
+ * Follow me on <https://github.com/JessYanCoding>
  * ================================================
  */
 public class CharacterHandler {

@@ -1,4 +1,4 @@
-/*
+/**
   * Copyright 2017 JessYan
   *
   * Licensed under the Apache License, Version 2.0 (the "License");
@@ -25,10 +25,11 @@ import android.view.View;
 
 /**
  * ================================================
- * 处理高斯模糊
+ * 处理高斯模糊的工具类
+ * <p>
  * Created by JessYan on 03/06/2014.
- * Contact with jess.yan.effort@gmail.com
- * Follow me on https://github.com/JessYanCoding
+ * Contact with <mailto:jess.yan.effort@gmail.com>
+ * Follow me on <https://github.com/JessYanCoding>
  * ================================================
  */
 public class FastBlur {
