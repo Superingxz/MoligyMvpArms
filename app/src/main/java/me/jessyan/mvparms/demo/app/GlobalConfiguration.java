@@ -41,8 +41,8 @@ import me.jessyan.retrofiturlmanager.RetrofitUrlManager;
  * app 的全局配置信息在此配置,需要将此实现类声明到 AndroidManifest 中
  * <p>
  * Created by JessYan on 12/04/2017 17:25
- * Contact with <mailto:jess.yan.effort@gmail.com>
- * Follow me on <https://github.com/JessYanCoding>
+ * <a href="mailto:jess.yan.effort@gmail.com">Contact me</a>
+ * <a href="https://github.com/JessYanCoding">Follow me</a>
  * ================================================
  */
 public final class GlobalConfiguration implements ConfigModule {
@@ -66,6 +66,22 @@ public final class GlobalConfiguration implements ConfigModule {
 //                    @Override
 //                    public HttpUrl url() {
 //                        return HttpUrl.parse(sDomain);
+//                    }
+//                })
+
+                //可根据当前项目的情况以及环境为框架某些部件提供自定义的缓存策略,具有强大的扩展性
+//                .cacheFactory(new Cache.Factory() {
+//                    @NonNull
+//                    @Override
+//                    public Cache build(int type) {
+//                        switch (type){
+//                            case EXTRAS_CACHE_TYPE:
+//                                return new LruCache(1000);
+//                            case REPOSITORY_CACHE_TYPE:
+//                                return new Cache();//自定义 Cache
+//                            default:
+//                                return new LruCache(DEFAULT_CACHE_SIZE);
+//                        }
 //                    }
 //                })
 
