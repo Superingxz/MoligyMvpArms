@@ -21,8 +21,6 @@ import com.trello.rxlifecycle2.RxLifecycle;
 
 import org.simple.eventbus.EventBus;
 
-import java.lang.ref.WeakReference;
-
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
 
@@ -41,9 +39,8 @@ public class BasePresenter<M extends IModel, V extends IView> implements IPresen
     protected CompositeDisposable mCompositeDisposable;
 
     protected M mModel;
-    //protected V mRootView;
+    protected V mRootView;
 
-    protected WeakReference<V> mView;
     /**
      * 如果当前页面同时需要 Model 层和 View 层,则使用此构造函数(默认)
      *
@@ -52,8 +49,7 @@ public class BasePresenter<M extends IModel, V extends IView> implements IPresen
      */
     public BasePresenter(M model, V rootView) {
         this.mModel = model;
-        //this.mRootView = rootView;
-        this.mView = new WeakReference<V>(rootView);
+        this.mRootView = rootView;
         onStart();
     }
 
@@ -63,8 +59,7 @@ public class BasePresenter<M extends IModel, V extends IView> implements IPresen
      * @param rootView
      */
     public BasePresenter(V rootView) {
-        //this.mRootView = rootView;
-        this.mView = new WeakReference<V>(rootView);
+        this.mRootView = rootView;
         onStart();
     }
 
@@ -90,8 +85,7 @@ public class BasePresenter<M extends IModel, V extends IView> implements IPresen
         if (mModel != null)
             mModel.onDestroy();
         this.mModel = null;
-        //this.mRootView = null;
-        mView.clear();
+        this.mRootView = null;
         this.mCompositeDisposable = null;
     }
 
