@@ -127,15 +127,22 @@ dependencies {
     //tools
     provided rootProject.ext.dependencies["javax.annotation"]
     compile rootProject.ext.dependencies["dagger2"]
-    annotationProcessor(rootProject.ext.dependencies["dagger2-compiler"]) {
-        exclude module: 'dagger'
-    }
+    annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
     compile rootProject.ext.dependencies["androideventbus"]
     compile rootProject.ext.dependencies["gson"]
 
     //test
     compile rootProject.ext.dependencies["timber"]
     testCompile rootProject.ext.dependencies["junit"]
+
+    //Google Architecture Components
+    compile rootProject.ext.dependencies["arch-lifecycle-runtime"]
+    compile rootProject.ext.dependencies["arch-lifecycle-extensions"]
+    annotationProcessor rootProject.ext.dependencies["arch-lifecycle-compiler"]
+
+    compile rootProject.ext.dependencies["arch-persistence-room-runtime"]
+    annotationProcessor rootProject.ext.dependencies["arch-persistence-room-compiler"]
+
 }
 
 
